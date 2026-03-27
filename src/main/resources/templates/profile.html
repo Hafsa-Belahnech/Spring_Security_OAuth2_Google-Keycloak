@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Mon Profil</title></head>
+<body>
+<h1>Bienvenue sur votre profil !</h1>
+<img th:src="${picture}" style="border-radius: 50%; width: 100px;">
+<p>Nom : <span th:text="${name}">Nom</span></p>
+<p>Email : <span th:text="${email}">Email</span></p>
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Se déconnecter</button>
+</form>
+</body>
+</html>
+
